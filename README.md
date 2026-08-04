@@ -1,89 +1,102 @@
-# Metro Booking System 🚇
+# 🚇 Integrated Metro Management Platform
 
-A full-stack Metro Booking System built using Spring Boot, PostgreSQL, React, JWT Authentication, and MinIO.
+A comprehensive **Metro Transit Management and Booking Platform** built using **Spring Boot**. The system is designed to manage metro cities, lines, stations, routes, trains, schedules, users, bookings, tickets, payments, and QR-based ticketing.
 
-The system allows users to register, log in, search metro schedules, book tickets, receive QR-based tickets, and validate tickets during metro entry/check-in.
+The project follows a layered backend architecture with REST APIs and relational database management.
 
 ---
 
-## 🚀 Features
+## 📌 Project Overview
 
-### Authentication & Authorization
+The Integrated Metro Management Platform is designed to simulate a real-world metro transportation management system.
+
+The platform manages the complete journey from:
+
+**Metro Network Management → Route & Train Scheduling → User Booking → Payment → Digital Ticket → QR Code**
+
+The system is being developed with scalability and modularity in mind so that additional cities, metro lines, stations, and services can be added in the future.
+
+---
+
+## 🚀 Key Features
+
+### 🏙️ City Management
+- Create cities
+- View cities
+- Update city information
+- Delete cities
+- Support multiple metro lines within a city
+
+### 🟣 Line Management
+- Create metro lines
+- Store line names and colors
+- Update lines
+- Delete lines
+- Associate stations with metro lines
+
+### 🚉 Station Management
+- Add stations
+- Update station information
+- Delete stations
+- View all stations
+- Associate stations with metro routes
+
+### 🛤️ Route Management
+- Create routes
+- Define ordered stations within routes
+- Store distance between consecutive stations
+- Store estimated travel time
+- Activate/deactivate routes
+
+### 🚆 Train Management
+- Add trains
+- Assign train numbers
+- Store coach count
+- Activate/deactivate trains
+
+### 📅 Schedule Management
+- Assign trains to routes
+- Define departure time
+- Define arrival time
+- Define fare
+- Activate/deactivate schedules
+
+### 👤 User Management
 - User registration
-- User login
-- JWT-based authentication
-- Password encryption using BCrypt
-- Role-based users
-- Protected API endpoints
+- User information management
+- Email and phone uniqueness
+- User roles
+- Account timestamps
 
-### Metro Management
-- Station management
-- Metro line management
-- Train management
-- Schedule management
+### 🎫 Booking Management
+- Create bookings
+- Associate bookings with users
+- Associate bookings with schedules
+- Passenger count
+- Fare calculation
+- Booking status management
 
-### Booking & Ticketing
-- Book metro journeys
-- Calculate total fare
-- Generate booking/ticket information
-- 24-hour ticket validity
-- Ticket status management
-- QR code generation
-- QR image storage using MinIO
-
-### Ticket Validation
+### 🎟️ Digital Ticketing
+- Generate tickets after successful booking
+- Generate unique QR codes
+- Store QR code files using MinIO
 - QR-based ticket verification
-- Check-in validation
-- Prevent reuse of already checked-in tickets
-- Validate ticket expiry
-- Ticket lifecycle management
 
-### Additional
-- PostgreSQL database
-- REST APIs
-- Exception handling
-- Backend/frontend integration
+### 💳 Payment
+- Payment processing
+- Payment status tracking
+- Booking-payment relationship
+- Payment confirmation before ticket generation
 
----
+### 📦 Object Storage
 
-## 🛠️ Tech Stack
+**MinIO** is used for storing generated QR code images.
 
-### Backend
-- Java 21
-- Spring Boot
-- Spring Web
-- Spring Data JPA
-- Spring Security
-- JWT
-- Hibernate
-- Lombok
-
-### Database
-- PostgreSQL
-
-### Storage
-- MinIO
-- Used for storing generated QR ticket images
-
-### Frontend
-- React
-- Vite
-- JavaScript
-- CSS
-
----
-
-## 📁 Backend Structure
+Example:
 
 ```text
-src/
-└── main/
-    └── java/
-        └── com.example.metrobookingsystem/
-            ├── Controller/
-            ├── Service/
-            ├── Repository/
-            ├── Entity/
-            ├── Security/
-            ├── Exception/
-            └── MetrobookingsystemApplication.java
+MinIO
+└── metro-tickets/
+    ├── ticket-1001.png
+    ├── ticket-1002.png
+    └── ticket-1003.png

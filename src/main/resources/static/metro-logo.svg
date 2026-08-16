@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="url(#metroGrad)"/>
+  <path d="M18 44V26c0-4 3-7 7-7h14c4 0 7 3 7 7v18" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 44h32" stroke="#FCD34D" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="22" cy="44" r="3" fill="#FCD34D"/>
+  <circle cx="42" cy="44" r="3" fill="#FCD34D"/>
+  <path d="M24 22v-4c0-2 1.5-3.5 3.5-3.5h9c2 0 3.5 1.5 3.5 3.5v4" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="metroGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E40AF"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+</svg>
